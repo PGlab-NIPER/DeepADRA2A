@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 """ 
-DeepADRA2A is a Deep Neural Network based tool to predict Adrenergic α2a (ADRA2A) inhibitor.
+DeepADRA2A is a Deep Neural Network-based tool to predict Adrenergic α2a (ADRA2A) inhibitors.
 
-It calculates descriptors using PaDEL, and uses them to predict inhibitors for AR with a trained DNN model. 
+It calculates descriptors using PaDEL and uses them to predict inhibitors for ADRA2A with a trained DNN model. 
 
-Compound's SMILES must be in .smi file in the same folder.
+The compound's SMILES must be in the .smi file in the same folder.
 Data (data.csv), model (DeePredmodel.h5), and PaDEL folder must be in the same folder, too. 
 
 Prediction results (class and probability) will be saved in Predictions.csv
@@ -57,7 +57,7 @@ def adra2a(input_ar: pd.DataFrame) -> np.ndarray:
     prediction = loaded_model.predict(ar_user_input)
 
     a = prediction[:,1]
-    b=prediction[:,0]
+    b = prediction[:,0]
     c=[]
     for i in range(len(a)):
         if a[i] >= b[i]:
@@ -70,7 +70,8 @@ def adra2a(input_ar: pd.DataFrame) -> np.ndarray:
     return prediction, c
     
 
-# Create main function to run descriptor calculation and predictions 
+# Create the main function to run descriptor calculation and predictions 
+
 def run_prediction(folder: str) -> None:
     """Function to calculate descriptors (using PaDEL) and to generate
     predictions of Adrenergic α2a (ADRA2A) inhibitors/ noninhibitors for a set of compounds (SMILES).
