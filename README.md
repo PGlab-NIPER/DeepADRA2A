@@ -16,8 +16,8 @@ The files contained in this repository are as follows:
 
 * Install Java for running the PaDel subprocess
 
-Install the following packages using the pip command (''pip install name_of_package = version'')
-* Python (version 3.9) #pip install python
+Install the following packages using the pip command (``pip install name_of_package = version``)
+* Python (version 3.9) 
 * Numpy (version 1.22)
 * Pandas (version 1.5)
 * Keras (version 2.11)
