@@ -10,16 +10,16 @@ The files contained in this repository are as follows:
  * ``smiles.smi``: User input structures (multiple)
  * ``deepSSLmodel.h5``: DNN prediction model
  * ``data.csv``: Dataset
- * ``PaDEL``: Folder with executable for feature calculation
+ * ``PaDEL``: Folder with an executable for feature calculation
 
 ## Requirements
 
-* Install Java for running PaDel subprocess
-* Python
-* Numpy
-* Pandas
-* Keras
-* Tensorflow
+* Install Java for running the PaDel subprocess
+* Python (version 3.9) #pip install python
+* Numpy (version 1.22)
+* Pandas (version 1.5)
+* Keras (version 2.11)
+* Tensorflow (version 2.11)
 
 ## Usage
 
