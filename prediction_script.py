@@ -99,6 +99,7 @@ def run_prediction(folder: str) -> None:
     input_ar.fillna(0, inplace=True)
     # Store name of each sample
     names = input_ar['Name'].copy()
+    input_ar = input_ar.drop(['Name'], axis=1)
     # Run predictions
     pred,c = adra2a(input_ar)    
     
